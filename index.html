@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91干逼网站 - 视频品牌官方网站</title>
+<meta name="description" content="91干逼网站官方网站，作为国内领先的视频内容平台，致力于为创作者与企业搭建高品质内容生态，提供原创、正版、高清的专业视频社区服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ff4d2e'/%3E%3Cpolygon points='35,28 35,72 75,50' fill='white'/%3E%3C/svg%3E">
+<style>
+:root{
+  --gv-brand:#ff4d2e;
+  --gv-brand-dark:#d8341a;
+  --gv-ink:#1a1a1a;
+  --gv-ink-soft:#4a4a4a;
+  --gv-muted:#7a7a7a;
+  --gv-line:#e6e6e6;
+  --gv-bg:#ffffff;
+  --gv-bg-soft:#f7f7f5;
+  --gv-bg-warm:#fff6f3;
+  --gv-radius:14px;
+  --gv-radius-sm:8px;
+  --gv-sticky-h:118px;
+  --gv-font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--gv-sticky-h)}
+body{
+  font-family:var(--gv-font);
+  color:var(--gv-ink);
+  background:var(--gv-bg);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* ============ 吸顶：公告条 + 页头 ============ */
+.gv-sticky-wrap{
+  position:sticky;
+  top:0;
+  z-index:200;
+  box-shadow:0 1px 12px rgba(0,0,0,.06);
+}
+.gv-announce{
+  background:linear-gradient(90deg,#1a1a1a,#3a2018 60%,#5c2416);
+  color:#fff;
+  font-size:13px;
+  padding:0 24px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  overflow:hidden;
+}
+.gv-announce__tag{
+  flex:0 0 auto;
+  background:var(--gv-brand);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  padding:3px 8px;
+  border-radius:4px;
+}
+.gv-announce__body{
+  flex:1 1 auto;
+  display:flex;
+  align-items:center;
+  gap:26px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.gv-announce__item{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:rgba(255,255,255,.86);
+}
+.gv-announce__item b{color:#ffb9a8;font-weight:600}
+.gv-announce__dot{width:4px;height:4px;border-radius:50%;background:var(--gv-brand);flex:0 0 auto}
+.gv-announce__time{color:rgba(255,255,255,.45);font-size:11px}
+
+.gv-header{
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--gv-line);
+  height:78px;
+  padding:0 24px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.gv-header__brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  flex:0 0 auto;
+}
+.gv-header__logo{
+  width:42px;height:42px;border-radius:11px;
+  background:linear-gradient(135deg,var(--gv-brand),#ff8a3d);
+  display:grid;place-items:center;
+  box-shadow:0 4px 14px rgba(255,77,46,.28);
+}
+.gv-header__logo svg{width:20px;height:20px}
+.gv-header__name{font-size:19px;font-weight:800;letter-spacing:.5px}
+.gv-header__name span{color:var(--gv-brand)}
+.gv-header__sub{font-size:10px;color:var(--gv-muted);letter-spacing:2px;font-weight:600;margin-top:-4px}
+
+.gv-nav{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  flex:1 1 auto;
+}
+.gv-nav__link{
+  padding:9px 14px;
+  border-radius:8px;
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--gv-ink-soft);
+  transition:.18s;
+  white-space:nowrap;
+}
+.gv-nav__link:hover{background:var(--gv-bg-warm);color:var(--gv-brand)}
+
+.gv-header__tools{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex:0 0 auto;
+}
+.gv-search{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.gv-search__input{
+  width:200px;
+  height:40px;
+  border:1px solid var(--gv-line);
+  border-radius:22px;
+  padding:0 40px 0 16px;
+  font-size:13.5px;
+  outline:none;
+  transition:.2s;
+  background:var(--gv-bg-soft);
+  color:var(--gv-ink);
+}
+.gv-search__input:focus{
+  border-color:var(--gv-brand);
+  background:#fff;
+  width:230px;
+  box-shadow:0 0 0 4px rgba(255,77,46,.1);
+}
+.gv-search__btn{
+  position:absolute;
+  right:4px;
+  width:32px;height:32px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  color:var(--gv-brand);
+}
+.gv-search__hint{
+  position:absolute;
+  top:46px;left:0;right:0;
+  background:#fff;
+  border:1px solid var(--gv-line);
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  padding:8px;
+  display:none;
+  font-size:13px;
+  z-index:300;
+}
+.gv-search__hint.is-open{display:block}
+.gv-search__hint li{padding:7px 10px;border-radius:6px;color:var(--gv-ink-soft)}
+.gv-search__hint li:hover{background:var(--gv-bg-warm);color:var(--gv-brand)}
+.gv-search__hint .gv-search__empty{padding:10px;color:var(--gv-muted);text-align:center}
+
+.gv-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-size:14px;
+  font-weight:700;
+  padding:10px 20px;
+  border-radius:22px;
+  transition:.2s;
+  white-space:nowrap;
+}
+.gv-btn--primary{background:var(--gv-brand);color:#fff;box-shadow:0 4px 14px rgba(255,77,46,.3)}
+.gv-btn--primary:hover{background:var(--gv-brand-dark);transform:translateY(-1px)}
+.gv-btn--ghost{border:1.5px solid var(--gv-line);color:var(--gv-ink-soft)}
+.gv-btn--ghost:hover{border-color:var(--gv-brand);color:var(--gv-brand)}
+.gv-btn--sm{padding:7px 14px;font-size:12.5px;border-radius:18px}
+
+.gv-burger{
+  display:none;
+  width:42px;height:42px;
+  border-radius:9px;
+  border:1px solid var(--gv-line);
+  place-items:center;
+}
+.gv-burger span{display:block;width:19px;height:2px;background:var(--gv-ink);border-radius:2px;position:relative;transition:.2s}
+.gv-burger span::before,.gv-burger span::after{content:"";position:absolute;left:0;width:19px;height:2px;background:var(--gv-ink);border-radius:2px;transition:.2s}
+.gv-burger span::before{top:-6px}
+.gv-burger span::after{top:6px}
+
+/* ============ 容器 ============ */
+.gv-wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.gv-section{padding:64px 0}
+.gv-section--soft{background:var(--gv-bg-soft)}
+.gv-section--warm{background:var(--gv-bg-warm)}
+
+.gv-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:800;letter-spacing:2.5px;
+  color:var(--gv-brand);text-transform:uppercase;
+  margin-bottom:12px;
+}
+.gv-eyebrow::before{content:"";width:22px;height:2px;background:var(--gv-brand);border-radius:2px}
+.gv-h2{font-size:31px;font-weight:800;letter-spacing:-.5px;line-height:1.3;margin-bottom:14px}
+.gv-h2 em{font-style:normal;color:var(--gv-brand)}
+.gv-lead{font-size:15px;color:var(--gv-muted);max-width:660px;line-height:1.8}
+.gv-section-head{margin-bottom:38px}
+
+/* ============ 首屏：左文右侧大图 ============ */
+.gv-hero{
+  background:linear-gradient(160deg,#fff8f5 0%,#ffffff 55%,#fdf2ee 100%);
+  border-bottom:1px solid var(--gv-line);
+  padding:56px 0 64px;
+  overflow:hidden;
+}
+.gv-hero__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);
+  gap:56px;
+  align-items:center;
+}
+.gv-hero__tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid #ffd9d0;
+  color:var(--gv-brand);
+  font-size:12px;font-weight:700;
+  padding:6px 14px;border-radius:20px;
+  margin-bottom:22px;
+  box-shadow:0 3px 12px rgba(255,77,46,.1);
+}
+.gv-hero__tag i{width:6px;height:6px;border-radius:50%;background:var(--gv-brand);display:block;animation:gv-pulse 1.8s infinite}
+@keyframes gv-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.gv-h1{
+  font-size:52px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  line-height:1.12;
+  margin-bottom:20px;
+}
+.gv-h1 span{
+  background:linear-gradient(100deg,var(--gv-brand),#ff8a3d);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.gv-hero__desc{
+  font-size:16px;color:var(--gv-ink-soft);
+  line-height:1.85;
+  max-width:520px;
+  margin-bottom:28px;
+}
+.gv-hero__stats{
+  display:flex;
+  gap:0;
+  margin-bottom:30px;
+  border-top:1px solid #f0e0da;
+  border-bottom:1px solid #f0e0da;
+  padding:16px 0;
+}
+.gv-hero__stat{
+  flex:1;
+  padding:0 6px;
+  border-right:1px solid #f0e0da;
+}
+.gv-hero__stat:last-child{border-right:none}
+.gv-hero__stat b{
+  display:block;
+  font-size:26px;
+  font-weight:900;
+  color:var(--gv-brand);
+  letter-spacing:-.5px;
+}
+.gv-hero__stat small{font-size:12px;color:var(--gv-muted);font-weight:600}
+.gv-hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.gv-hero__visual{
+  position:relative;
+}
+.gv-hero__frame{
+  border-radius:22px;
+  overflow:hidden;
+  aspect-ratio:16/11;
+  box-shadow:0 30px 70px -24px rgba(120,50,30,.4);
+  position:relative;
+  background:#2a1410;
+}
+.gv-hero__frame svg{width:100%;height:100%}
+.gv-hero__play{
+  position:absolute;
+  left:22px;bottom:22px;
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  padding:9px 18px 9px 10px;
+  border-radius:34px;
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+}
+.gv-hero__play i{
+  width:34px;height:34px;border-radius:50%;
+  background:var(--gv-brand);
+  display:grid;place-items:center;
+  flex:0 0 auto;
+}
+.gv-hero__play i svg{width:13px;height:13px}
+.gv-hero__play b{font-size:13px;font-weight:800;display:block;line-height:1.2}
+.gv-hero__play small{font-size:11px;color:var(--gv-muted)}
+.gv-hero__badge{
+  position:absolute;
+  top:-14px;right:-10px;
+  background:var(--gv-ink);
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  padding:8px 15px;
+  border-radius:9px;
+  transform:rotate(3deg);
+  box-shadow:0 8px 18px rgba(0,0,0,.22);
+}
+.gv-hero__badge b{color:#ffb9a8}
+
+/* ============ 视频流 ============ */
+.gv-focus{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:34px;
+  margin-bottom:44px;
+}
+.gv-focus__main{
+  border-radius:var(--gv-radius);
+  overflow:hidden;
+  background:#1a1a1a;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+.gv-focus__img{aspect-ratio:16/9;position:relative}
+.gv-focus__img svg{width:100%;height:100%}
+.gv-focus__body{padding:22px 24px 24px;color:#fff;background:linear-gradient(180deg,rgba(10,10,10,.0),#121212 40%);margin-top:-60px;position:relative;z-index:2}
+.gv-focus__label{
+  display:inline-block;background:var(--gv-brand);color:#fff;
+  font-size:11px;font-weight:800;letter-spacing:1px;
+  padding:4px 11px;border-radius:5px;margin-bottom:12px;
+}
+.gv-focus__title{font-size:23px;font-weight:800;line-height:1.35;margin-bottom:10px}
+.gv-focus__text{font-size:13.5px;color:rgba(255,255,255,.66);line-height:1.7;margin-bottom:16px}
+.gv-focus__meta{display:flex;align-items:center;gap:14px;font-size:12px;color:rgba(255,255,255,.55);flex-wrap:wrap}
+.gv-focus__meta b{color:#fff;font-weight:700}
+
+.gv-focus__list{
+  display:flex;flex-direction:column;gap:12px;
+}
+.gv-mini{
+  display:flex;gap:14px;
+  padding:13px;
+  border-radius:var(--gv-radius-sm);
+  background:#fff;
+  border:1px solid var(--gv-line);
+  transition:.2s;
+  align-items:center;
+}
+.gv-mini:hover{border-color:#ffc4b5;transform:translateX(4px);box-shadow:0 6px 20px rgba(255,77,46,.1)}
+.gv-mini__thumb{
+  flex:0 0 92px;
+  width:92px;height:64px;
+  border-radius:7px;overflow:hidden;
+  background:#eee;
+}
+.gv-mini__thumb svg{width:100%;height:100%}
+.gv-mini__info{flex:1 1 auto;min-width:0}
+.gv-mini__title{font-size:14px;font-weight:700;line-height:1.4;margin-bottom:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gv-mini__sub{font-size:11.5px;color:var(--gv-muted);display:flex;gap:10px;flex-wrap:wrap}
+.gv-mini__sub em{font-style:normal;color:var(--gv-brand);font-weight:700}
+
+.gv-video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.gv-card{
+  background:#fff;
+  border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  overflow:hidden;
+  transition:.25s;
+  display:flex;
+  flex-direction:column;
+}
+.gv-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px -14px rgba(0,0,0,.16);border-color:#ffc9bb}
+.gv-card__cover{position:relative;aspect-ratio:16/9;background:#f2ece9;overflow:hidden}
+.gv-card__cover svg{width:100%;height:100%}
+.gv-card__tag{
+  position:absolute;left:10px;top:10px;
+  background:rgba(0,0,0,.72);color:#fff;
+  font-size:10.5px;font-weight:700;
+  padding:3px 9px;border-radius:5px;
+  backdrop-filter:blur(4px);
+}
+.gv-card__body{padding:15px 16px 16px;display:flex;flex-direction:column;flex:1 1 auto}
+.gv-card__title{font-size:15px;font-weight:700;line-height:1.45;margin-bottom:8px}
+.gv-card__desc{font-size:12.5px;color:var(--gv-muted);line-height:1.65;margin-bottom:13px;flex:1 1 auto;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gv-card__author{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gv-ink-soft);margin-bottom:12px}
+.gv-avatar{
+  width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:11px;font-weight:800;color:#fff;
+  flex:0 0 auto;
+}
+.gv-card__foot{
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid var(--gv-line);
+  padding-top:11px;
+  font-size:11.5px;color:var(--gv-muted);
+}
+.gv-card__stats{display:flex;gap:12px}
+.gv-actions{display:flex;gap:6px}
+.gv-iconbtn{
+  width:30px;height:30px;
+  border-radius:8px;
+  display:grid;place-items:center;
+  color:var(--gv-muted);
+  transition:.18s;
+}
+.gv-iconbtn:hover{background:var(--gv-bg-warm);color:var(--gv-brand)}
+.gv-iconbtn.is-active{color:var(--gv-brand)}
+.gv-iconbtn svg{width:16px;height:16px}
+
+/* ============ 关键词解析 ============ */
+.gv-parse{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,320px);
+  gap:48px;
+  align-items:start;
+}
+.gv-parse__body{font-size:15px;color:var(--gv-ink-soft);line-height:1.95}
+.gv-parse__body h3{
+  font-size:20px;font-weight:800;color:var(--gv-ink);
+  margin:30px 0 12px;
+  padding-left:14px;
+  border-left:4px solid var(--gv-brand);
+  line-height:1.4;
+}
+.gv-parse__body h3:first-child{margin-top:0}
+.gv-parse__body p{margin-bottom:14px}
+.gv-parse__body strong{color:var(--gv-ink);font-weight:700}
+.gv-parse__aside{
+  position:sticky;top:calc(var(--gv-sticky-h) + 20px);
+  background:#fff;
+  border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  padding:24px;
+}
+.gv-parse__aside h4{font-size:15px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.gv-parse__aside h4::before{content:"";width:8px;height:8px;background:var(--gv-brand);border-radius:2px;transform:rotate(45deg)}
+.gv-parse__facts{display:flex;flex-direction:column;gap:14px}
+.gv-parse__fact{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:13px;padding-bottom:12px;border-bottom:1px dashed var(--gv-line)}
+.gv-parse__fact:last-child{border-bottom:none;padding-bottom:0}
+.gv-parse__fact span{color:var(--gv-muted)}
+.gv-parse__fact b{color:var(--gv-brand);font-weight:800;font-size:15px}
+
+/* ============ 专题 ============ */
+.gv-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gv-topic{
+  background:#fff;
+  border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:.25s;
+}
+.gv-topic:hover{box-shadow:0 16px 40px -16px rgba(0,0,0,.15);border-color:#ffc9bb}
+.gv-topic__head{padding:22px 24px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.gv-topic__num{font-size:36px;font-weight:900;color:#ffd6cb;line-height:1;letter-spacing:-2px}
+.gv-topic__status{
+  font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;
+  background:#eaf7ee;color:#1f8a4c;white-space:nowrap;
+}
+.gv-topic__status--live{background:#fff0eb;color:var(--gv-brand)}
+.gv-topic__title{font-size:19px;font-weight:800;padding:0 24px;margin-top:8px;line-height:1.4}
+.gv-topic__desc{font-size:13.5px;color:var(--gv-muted);padding:10px 24px 16px;line-height:1.7}
+.gv-topic__items{padding:0 24px 22px;margin-top:auto}
+.gv-topic__items li{
+  font-size:13px;color:var(--gv-ink-soft);
+  padding:9px 0;
+  border-top:1px dashed var(--gv-line);
+  display:flex;gap:10px;align-items:baseline;
+}
+.gv-topic__items li::before{content:"›";color:var(--gv-brand);font-weight:800;font-size:15px;line-height:1}
+
+/* ============ 创作者 ============ */
+.gv-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.gv-author{
+  display:flex;gap:18px;
+  background:#fff;
+  border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  padding:22px;
+  transition:.22s;
+}
+.gv-author:hover{border-color:#ffc4b5;box-shadow:0 12px 30px -14px rgba(255,77,46,.22)}
+.gv-author__avatar{
+  flex:0 0 64px;
+  width:64px;height:64px;
+  border-radius:18px;
+  display:grid;place-items:center;
+  font-size:24px;font-weight:900;color:#fff;
+  position:relative;
+}
+.gv-author__avatar span{position:absolute;right:-5px;bottom:-5px;font-size:15px;background:#fff;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.gv-author__info{flex:1 1 auto;min-width:0}
+.gv-author__name{font-size:17px;font-weight:800;margin-bottom:3px;display:flex;align-items:center;gap:8px}
+.gv-author__field{font-size:12px;color:var(--gv-brand);font-weight:700;margin-bottom:9px}
+.gv-author__bio{font-size:12.5px;color:var(--gv-muted);line-height:1.7;margin-bottom:12px}
+.gv-author__stats{display:flex;gap:16px;font-size:11.5px;color:var(--gv-muted)}
+.gv-author__stats b{color:var(--gv-ink);font-weight:800;font-size:13px}
+
+/* ============ 榜单 ============ */
+.gv-rank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.gv-rank__col{
+  background:#fff;border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  padding:22px;
+}
+.gv-rank__title{
+  font-size:15px;font-weight:800;margin-bottom:16px;
+  padding-bottom:13px;border-bottom:2px solid var(--gv-ink);
+  display:flex;align-items:center;gap:8px;
+}
+.gv-rank__title i{width:7px;height:7px;border-radius:50%;background:var(--gv-brand)}
+.gv-rank__list{display:flex;flex-direction:column;gap:14px}
+.gv-rank__item{display:flex;gap:12px;align-items:flex-start;font-size:13px}
+.gv-rank__no{
+  flex:0 0 22px;width:22px;height:22px;border-radius:7px;
+  display:grid;place-items:center;
+  font-size:11.5px;font-weight:800;
+  background:var(--gv-bg-soft);color:var(--gv-muted);
+}
+.gv-rank__item:nth-child(1) .gv-rank__no{background:var(--gv-brand);color:#fff}
+.gv-rank__item:nth-child(2) .gv-rank__no{background:#ff8a3d;color:#fff}
+.gv-rank__item:nth-child(3) .gv-rank__no{background:#ffb9a8;color:#a4341c}
+.gv-rank__info{flex:1 1 auto;min-width:0}
+.gv-rank__name{font-weight:700;line-height:1.4;margin-bottom:3px}
+.gv-rank__sub{font-size:11px;color:var(--gv-muted);display:flex;gap:9px}
+.gv-rank__sub b{color:var(--gv-brand)}
+
+/* ============ 评价 ============ */
+.gv-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gv-comment{
+  background:#fff;border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius);
+  padding:20px;
+  display:flex;flex-direction:column;
+  transition:.2s;
+}
+.gv-comment:nth-child(3n){background:var(--gv-bg-warm)}
+.gv-comment:hover{border-color:#ffc4b5}
+.gv-comment__head{display:flex;align-items:center;gap:11px;margin-bottom:11px}
+.gv-comment__who{flex:1 1 auto;min-width:0}
+.gv-comment__who b{font-size:13.5px;font-weight:700;display:block}
+.gv-comment__who small{font-size:11px;color:var(--gv-muted)}
+.gv-stars{color:#ffa825;font-size:12.5px;letter-spacing:1px}
+.gv-comment__text{font-size:13.5px;color:var(--gv-ink-soft);line-height:1.78}
+.gv-comment__foot{margin-top:12px;font-size:11.5px;color:var(--gv-muted);display:flex;gap:14px}
+
+/* ============ 品牌动态 ============ */
+.gv-dynamics{display:flex;flex-direction:column;gap:0}
+.gv-dyn{
+  display:grid;
+  grid-template-columns:110px minmax(0,1fr) auto;
+  gap:22px;
+  align-items:center;
+  padding:19px 0;
+  border-bottom:1px solid var(--gv-line);
+  transition:.2s;
+}
+.gv-dyn:first-child{border-top:1px solid var(--gv-line)}
+.gv-dyn:hover{background:var(--gv-bg-warm);padding-left:12px;padding-right:12px;border-radius:8px}
+.gv-dyn__date{font-size:12.5px;color:var(--gv-muted);font-weight:600}
+.gv-dyn__title{font-size:14.5px;font-weight:700;margin-bottom:3px}
+.gv-dyn__desc{font-size:12.5px;color:var(--gv-muted)}
+.gv-dyn__tag{font-size:11px;font-weight:700;color:var(--gv-brand);background:#fff0eb;padding:4px 10px;border-radius:20px;white-space:nowrap}
+
+/* ============ 合作墙 ============ */
+.gv-partners{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.gv-partner{
+  background:#fff;border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius-sm);
+  padding:22px 16px;
+  text-align:center;
+  transition:.2s;
+}
+.gv-partner:hover{border-color:var(--gv-brand);transform:translateY(-3px);box-shadow:0 10px 24px -12px rgba(255,77,46,.24)}
+.gv-partner b{font-size:15px;font-weight:800;display:block;margin-bottom:5px}
+.gv-partner small{font-size:11.5px;color:var(--gv-muted)}
+
+/* ============ FAQ ============ */
+.gv-faq{display:flex;flex-direction:column;gap:11px;max-width:860px;margin:0 auto}
+.gv-faq details{
+  background:#fff;border:1px solid var(--gv-line);
+  border-radius:var(--gv-radius-sm);
+  overflow:hidden;
+}
+.gv-faq details[open]{border-color:#ffc4b5;box-shadow:0 8px 22px -14px rgba(255,77,46,.24)}
+.gv-faq summary{
+  list-style:none;
+  padding:17px 22px;
+  font-size:14.5px;font-weight:700;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;
+}
+.gv-faq summary::-webkit-details-marker{display:none}
+.gv-faq summary::after{
+  content:"+";font-size:20px;font-weight:400;color:var(--gv-brand);
+  transition:.2s;flex:0 0 auto;
+}
+.gv-faq details[open] summary::after{transform:rotate(45deg)}
+.gv-faq__answer{padding:0 22px 18px;font-size:13.5px;color:var(--gv-muted);line-height:1.85}
+
+/* ============ 投稿 CTA ============ */
+.gv-cta{
+  background:linear-gradient(120deg,#1c1010,#3a1a10 55%,#5c2416);
+  border-radius:22px;
+  padding:46px 44px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+  flex-wrap:wrap;
+  position:relative;
+  overflow:hidden;
+}
+.gv-cta::after{
+  content:"";position:absolute;right:-60px;top:-60px;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,77,46,.4),transparent 70%);
+}
+.gv-cta h3{font-size:26px;font-weight:900;margin-bottom:8px;letter-spacing:-.5px;position:relative;z-index:1}
+.gv-cta p{font-size:14px;color:rgba(255,255,255,.6);max-width:520px;position:relative;z-index:1}
+.gv-cta__actions{display:flex;gap:12px;position:relative;z-index:1;flex-wrap:wrap}
+
+/* ============ 页脚 ============ */
+.gv-footer{background:var(--gv-ink);color:rgba(255,255,255,.66);padding:56px 0 0;font-size:13px}
+.gv-footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:40px}
+.gv-footer__brand{display:flex;align-items:center;gap:11px;margin-bottom:16px}
+.gv-footer__brand .gv-header__logo{box-shadow:none}
+.gv-footer__brand b{color:#fff;font-size:18px;font-weight:800}
+.gv-footer__desc{font-size:12.5px;line-height:1.85;color:rgba(255,255,255,.5);max-width:320px}
+.gv-footer h4{color:#fff;font-size:13.5px;font-weight:800;margin-bottom:14px}
+.gv-footer li{margin-bottom:9px;font-size:12.5px}
+.gv-footer li a:hover{color:var(--gv-brand)}
+.gv-footer__bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:20px 0 24px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:rgba(255,255,255,.4);
+}
+
+/* ============ 弹窗 & Toast ============ */
+.gv-modal{
+  position:fixed;inset:0;z-index:900;
+  background:rgba(15,10,8,.62);
+  backdrop-filter:blur(4px);
+  display:none;align-items:center;justify-content:center;
+  padding:24px;
+}
+.gv-modal.is-open{display:flex}
+.gv-modal__box{
+  background:#fff;border-radius:18px;
+  max-width:460px;width:100%;
+  padding:30px;
+  position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);
+  animation:gv-pop .22s ease;
+}
+@keyframes gv-pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+.gv-modal__close{position:absolute;right:14px;top:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--gv-muted);font-size:20px}
+.gv-modal__close:hover{background:var(--gv-bg-soft);color:var(--gv-ink)}
+.gv-modal h3{font-size:20px;font-weight:800;margin-bottom:8px}
+.gv-modal p{font-size:13.5px;color:var(--gv-muted);line-height:1.8;margin-bottom:18px}
+.gv-field{margin-bottom:14px}
+.gv-field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px}
+.gv-field input,.gv-field textarea{
+  width:100%;border:1px solid var(--gv-line);
+  border-radius:9px;padding:11px 13px;
+  font-size:13.5px;font-family:inherit;outline:none;
+  transition:.2s;color:var(--gv-ink);
+}
+.gv-field input:focus,.gv-field textarea:focus{border-color:var(--gv-brand);box-shadow:0 0 0 3px rgba(255,77,46,.1)}
+.gv-field textarea{resize:vertical;min-height:90px}
+
+.gv-toast{
+  position:fixed;
+  left:50%;bottom:34px;
+  transform:translate(-50%,20px);
+  background:var(--gv-ink);
+  color:#fff;
+  font-size:13.5px;
+  font-weight:600;
+  padding:12px 22px;
+  border-radius:26px;
+  box-shadow:0 12px 34px rgba(0,0,0,.3);
+  opacity:0;pointer-events:none;
+  transition:.28s;
+  z-index:950;
+  display:flex;align-items:center;gap:9px;
+}
+.gv-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.gv-toast i{color:var(--gv-brand);font-style:normal;font-weight:900}
+
+/* ============ 回到顶部 ============ */
+.gv-top{
+  position:fixed;right:26px;bottom:28px;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--gv-brand);color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 8px 22px rgba(255,77,46,.4);
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:.25s;z-index:150;
+}
+.gv-top.is-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.gv-top:hover{background:var(--gv-brand-dark)}
+.gv-top svg{width:18px;height:18px}
+
+/* ============ 响应式 ============ */
+@media(max-width:1024px){
+  .gv-hero__grid{grid-template-columns:1fr;gap:36px}
+  .gv-h1{font-size:42px}
+  .gv-focus{grid-template-columns:1fr}
+  .gv-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gv-parse{grid-template-columns:1fr}
+  .gv-parse__aside{position:static}
+  .gv-rank{grid-template-columns:1fr}
+  .gv-footer__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .gv-nav{
+    display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    background:#fff;
+    flex-direction:column;
+    align-items:stretch;
+    padding:12px 18px 18px;
+    border-bottom:1px solid var(--gv-line);
+    box-shadow:0 18px 34px -14px rgba(0,0,0,.18);
+    gap:4px;
+  }
+  .gv-nav.is-open{display:flex}
+  .gv-nav__link{padding:12px 14px}
+  .gv-header{position:relative;height:auto;min-height:64px;padding:12px 18px;flex-wrap:wrap;gap:12px}
+  .gv-header__tools{order:3;width:100%}
+  .gv-search{flex:1 1 auto}
+  .gv-search__input{width:100%}
+  .gv-search__input:focus{width:100%}
+  .gv-burger{display:grid}
+  .gv-sticky-wrap{position:sticky}
+  :root{--gv-sticky-h:150px}
+  .gv-h1{font-size:34px}
+  .gv-h2{font-size:25px}
+  .gv-authors,.gv-comments,.gv-topic-grid{grid-template-columns:1fr}
+  .gv-video-grid{grid-template-columns:1fr}
+  .gv-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gv-cta{padding:32px 26px}
+  .gv-cta h3{font-size:22px}
+  .gv-dyn{grid-template-columns:1fr;gap:6px;padding:16px 0}
+  .gv-announce__body{overflow-x:auto;scrollbar-width:none}
+  .gv-announce__body::-webkit-scrollbar{display:none}
+  .gv-section{padding:46px 0}
+  .gv-wrap{padding:0 18px}
+}
+@media(max-width:520px){
+  .gv-hero__stats{flex-wrap:wrap;gap:12px}
+  .gv-hero__stat{flex:0 0 45%;border-right:none}
+  .gv-header__logo{width:36px;height:36px}
+  .gv-header__name{font-size:16px}
+  .gv-author{flex-direction:column}
+  .gv-footer__grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶：公告条 + 页头 ===== -->
+<div class="gv-sticky-wrap">
+  <div class="gv-announce" role="region" aria-label="官方公告">
+    <span class="gv-announce__tag">官方发布</span>
+    <div class="gv-announce__body">
+      <span class="gv-announce__item"><i class="gv-announce__dot"></i><b>「创作者扶持计划 2026」</b> 开放报名，首期 500 个名额已上线</span>
+      <span class="gv-announce__item"><i class="gv-announce__dot"></i>高清 4K 播放通道全量开放，上传即享正版转码</span>
+      <span class="gv-announce__item"><i class="gv-announce__dot"></i>「城市影像大赛」投稿截止 12 月 20 日</span>
+      <span class="gv-announce__item"><i class="gv-announce__dot"></i>社区新版评论区灰度上线，支持引用摘录</span>
+      <span class="gv-announce__time">最后更新 11-22</span>
+    </div>
+  </div>
+
+  <header class="gv-header">
+    <a class="gv-header__brand" href="#top">
+      <span class="gv-header__logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6.5v11l9-5.5-9-5.5Z" fill="#fff"/></svg>
+      </span>
+      <span>
+        <span class="gv-header__name">91<span>干逼</span>网站</span>
+        <span class="gv-header__sub">VIDEO BRAND</span>
+      </span>
+    </a>
+
+    <nav class="gv-nav" id="gvNav" aria-label="主导航">
+      <a class="gv-nav__link" href="#focus">精品内容</a>
+      <a class="gv-nav__link" href="#parse">品牌解析</a>
+      <a class="gv-nav__link" href="#topics">专题企划</a>
+      <a class="gv-nav__link" href="#authors">创作者</a>
+      <a class="gv-nav__link" href="#rank">榜单</a>
+      <a class="gv-nav__link" href="#dynamics">企业动态</a>
+      <a class="gv-nav__link" href="#faq">帮助</a>
+    </nav>
+
+    <div class="gv-header__tools">
+      <div class="gv-search">
+        <input class="gv-search__input" id="gvSearchInput" type="search" placeholder="搜索视频、创作者、专题" aria-label="站内搜索">
+        <button class="gv-search__btn" id="gvSearchBtn" aria-label="搜索">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <ul class="gv-search__hint" id="gvSearchHint"></ul>
+      </div>
+      <button class="gv-btn gv-btn--primary gv-btn--sm" id="gvSubmitOpen">我要投稿</button>
+      <button class="gv-burger" id="gvBurger" aria-label="展开导航" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- ===== 首屏 ===== -->
+  <section class="gv-hero">
+    <div class="gv-wrap">
+      <div class="gv-hero__grid">
+        <div>
+          <span class="gv-hero__tag"><i></i>官方网站 · 持续运营 9 年</span>
+          <h1 class="gv-h1">91干逼网站<br><span>让每一帧影像都有价值</span></h1>
+          <p class="gv-hero__desc">91干逼网站是面向创作者与观众的视频品牌官网，深耕原创影像内容生态。我们以高清画质、正版授权与专业运营为基础，为行业提供值得信赖的内容分发与社区服务，让真实的表达被更多人看见。</p>
+          <div class="gv-hero__stats">
+            <div class="gv-hero__stat"><b>12.8万</b><small>入驻创作者</small></div>
+            <div class="gv-hero__stat"><b>46万+</b><small>原创视频条数</small></div>
+            <div class="gv-hero__stat"><b>3200万</b><small>月活跃观众</small></div>
+          </div>
+          <div class="gv-hero__actions">
+            <a class="gv-btn gv-btn--primary" href="#focus">进入精品内容库</a>
+            <a class="gv-btn gv-btn--ghost" href="#authors">认识创作者</a>
+          </div>
+        </div>
+        <div class="gv-hero__visual">
+          <div class="gv-hero__badge">原创 · 正版 · <b>高清</b></div>
+          <div class="gv-hero__frame">
+            <svg viewBox="0 0 640 440" role="img" aria-label="首屏主视觉：夜色中手持摄影机拍摄城市霓虹的创作者身影">
+              <defs>
+                <linearGradient id="gvHeroSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1b1020"/>
+                  <stop offset=".55" stop-color="#3d1a24"/>
+                  <stop offset="1" stop-color="#6b2418"/>
+                </linearGradient>
+                <linearGradient id="gvHeroGlow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ff4d2e"/>
+                  <stop offset="1" stop-color="#ffb347"/>
+                </linearGradient>
+                <radialGradient id="gvHeroHalo" cx=".62" cy=".38" r=".5">
+                  <stop offset="0" stop-color="#ffd9a0" stop-opacity=".85"/>
+                  <stop offset=".5" stop-color="#ff7a45" stop-opacity=".35"/>
+                  <stop offset="1" stop-color="#ff4d2e" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <rect width="640" height="440" fill="url(#gvHeroSky)"/>
+              <circle cx="398" cy="168" r="170" fill="url(#gvHeroHalo)"/>
+              <g opacity=".55" fill="#2a1520">
+                <rect x="24" y="248" width="66" height="160"/>
+                <rect x="100" y="212" width="48" height="196"/>
+                <rect x="158" y="270" width="58" height="138"/>
+                <rect x="230" y="230" width="40" height="178"/>
+                <rect x="500" y="252" width="52" height="156"/>
+                <rect x="562" y="222" width="58" height="186"/>
+              </g>
+              <g opacity=".85">
+                <rect x="40" y="266" width="10" height="12" fill="#ffc46b"/>
+                <rect x="60" y="292" width="10" height="12" fill="#ff9d5c"/>
+                <rect x="110" y="234" width="10" height="12" fill="#ffe0a8"/>
+                <rect x="168" y="292" width="10" height="12" fill="#ffc46b"/>
+                <rect x="240" y="258" width="10" height="12" fill="#ff9d5c"/>
+                <rect x="514" y="272" width="10" height="12" fill="#ffe0a8"/>
+                <rect x="580" y="246" width="10" height="12" fill="#ffc46b"/>
+              </g>
+              <ellipse cx="320" cy="404" rx="250" ry="34" fill="#140a10" opacity=".8"/>
+              <g>
+                <circle cx="318" cy="196" r="26" fill="#160c12"/>
+                <path d="M296 218q22-16 44 0l10 74h-64Z" fill="#160c12"/>
+                <path d="M282 236h58l18-10v52l-18-8h-58Z" fill="#0f080d"/>
+                <rect x="336" y="238" width="42" height="30" rx="6" fill="#221119"/>
+                <circle cx="357" cy="253" r="11" fill="url(#gvHeroGlow)"/>
+                <rect x="374" y="244" width="26" height="18" rx="4" fill="#2c1620"/>
+                <rect x="252" y="246" width="34" height="46" rx="6" fill="#221119"/>
+              </g>
+              <g stroke="url(#gvHeroGlow)" stroke-width="2" fill="none" opacity=".7">
+                <path d="M120 118q64-42 132-8"/>
+                <path d="M470 96q46 30 32 82"/>
+              </g>
+              <circle cx="118" cy="118" r="5" fill="#ffd9a0"/>
+              <circle cx="504" cy="176" r="4" fill="#ffb347"/>
+            </svg>
+            <div class="gv-hero__play">
+              <i><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></svg></i>
+              <span>
+                <b>品牌形象片 · 光影九年</b>
+                <small>04:12 · 高清 4K</small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 焦点内容 + 视频流 ===== -->
+  <section class="gv-section" id="focus">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Featured Content</span>
+        <h2 class="gv-h2">精品内容 · 91干逼网站<em>本期焦点</em></h2>
+        <p class="gv-lead">编辑部每周从原创投稿中筛选高品质影像，覆盖城市、生活、人物与幕后四类方向，为社区提供可参考的创作样本。</p>
+      </div>
+
+      <div class="gv-focus">
+        <article class="gv-focus__main">
+          <div class="gv-focus__img">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点内容封面：清晨菜市场中摊主整理蔬菜的暖色调画面">
+              <defs>
+                <linearGradient id="gvFocusBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#fff3e2"/>
+                  <stop offset="1" stop-color="#ffd6bd"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#gvFocusBg)"/>
+              <g opacity=".9">
+                <rect x="0" y="238" width="640" height="122" fill="#e8a37a"/>
+                <rect x="40" y="252" width="560" height="10" fill="#c97f56"/>
+              </g>
+              <g>
+                <circle cx="146" cy="132" r="30" fill="#7a4a32"/>
+                <path d="M108 172q38-26 78 0l16 66h-110Z" fill="#8e5a3c"/>
+                <rect x="196" y="160" width="120" height="80" rx="8" fill="#fff8ee"/>
+                <g fill="#4f8a3d">
+                  <circle cx="222" cy="180" r="12"/><circle cx="250" cy="176" r="14"/><circle cx="280" cy="184" r="11"/>
+                </g>
+                <g fill="#ff6b3d">
+                  <circle cx="228" cy="212" r="11"/><circle cx="256" cy="216" r="13"/><circle cx="288" cy="210" r="10"/>
+                </g>
+                <rect x="352" y="120" width="150" height="120" rx="10" fill="#fff6ec"/>
+                <g fill="#b8462c"><circle cx="392" cy="164" r="15"/><circle cx="428" cy="170" r="13"/><circle cx="466" cy="160" r="16"/></g>
+                <g fill="#3f7c34"><circle cx="404" cy="204" r="12"/><circle cx="446" cy="208" r="14"/></g>
+                <circle cx="540" cy="140" r="34" fill="#6b3f2a"/>
+                <path d="M502 178q38-26 76 0l14 62h-104Z" fill="#7d4b32"/>
+              </g>
+              <g stroke="#9c6244" stroke-width="3" opacity=".5" fill="none">
+                <path d="M60 68h120"/><path d="M60 88h78"/>
+              </g>
+              <rect x="0" y="0" width="640" height="360" fill="none" stroke="rgba(255,77,46,.28)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="gv-focus__body">
+            <span class="gv-focus__label">本周重点 · 生活影像</span>
+            <h3 class="gv-focus__title">清晨五点，我在菜市场拍到了一场安静的交接</h3>
+            <p class="gv-focus__text">从凌晨四点的批发市场到六点的摊位灯亮，跟拍三位摊主二十一天。我们用一台机身和一支定焦，记录下城市醒来前的秩序，也记录下真实生活里不用滤镜的温度。</p>
+            <div class="gv-focus__meta">
+              <span>作者 <b>@老谭的广角</b></span>
+              <span>播放 <b>86.4万</b></span>
+              <span>点赞 <b>3.2万</b></span>
+              <span>收藏 <b>1.8万</b></span>
+            </div>
+          </div>
+        </article>
+
+        <ul class="gv-focus__list">
+          <li class="gv-mini">
+            <div class="gv-mini__thumb">
+              <svg viewBox="0 0 184 128" role="img" aria-label="视频缩略图：骑行者在山路上经过晨雾的剪影">
+                <rect width="184" height="128" fill="#cfe0e8"/>
+                <path d="M0 96 62 52l44 30 40-22 38 26v42H0Z" fill="#7a9aa8"/>
+                <path d="M0 112 70 82l60 20 54-14v40H0Z" fill="#4c6d7c"/>
+                <circle cx="102" cy="80" r="7" fill="#24343c"/>
+                <path d="M96 88h14l6 18H92Z" fill="#24343c"/>
+                <circle cx="102" cy="112" r="6" fill="none" stroke="#1c2a31" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="gv-mini__info">
+              <h3 class="gv-mini__title">山路上坡十八公里，我在雾散之前到达了垭口</h3>
+              <div class="gv-mini__sub"><em>户外记录</em><span>@山野阿洛</span><span>12.6万播放</span></div>
+            </div>
+          </li>
+          <li class="gv-mini">
+            <div class="gv-mini__thumb">
+              <svg viewBox="0 0 184 128" role="img" aria-label="视频缩略图：桌面上摊开的剪辑时间轴与调色面板">
+                <rect width="184" height="128" fill="#20222a"/>
+                <rect x="16" y="20" width="152" height="24" rx="4" fill="#2d303b"/>
+                <g fill="#ff4d2e"><rect x="24" y="26" width="34" height="12" rx="2"/></g>
+                <g fill="#5a8f7b"><rect x="66" y="26" width="52" height="12" rx="2"/></g>
+                <g fill="#c9a04a"><rect x="126" y="26" width="34" height="12" rx="2"/></g>
+                <rect x="16" y="54" width="70" height="54" rx="4" fill="#2d303b"/>
+                <g fill="#4a7a8c"><rect x="22" y="62" width="58" height="9" rx="2"/><rect x="22" y="76" width="44" height="9" rx="2"/><rect x="22" y="90" width="52" height="9" rx="2"/></g>
+                <rect x="96" y="54" width="72" height="54" rx="4" fill="#2d303b"/>
+                <circle cx="132" cy="81" r="20" fill="none" stroke="#ff8a3d" stroke-width="4"/>
+              </svg>
+            </div>
+            <div class="gv-mini__info">
+              <h3 class="gv-mini__title">十分钟学会一条片子的调色逻辑：先定基调再谈风格</h3>
+              <div class="gv-mini__sub"><em>教程干货</em><span>@剪辑师南音</span><span>9.8万播放</span></div>
+            </div>
+          </li>
+          <li class="gv-mini">
+            <div class="gv-mini__thumb">
+              <svg viewBox="0 0 184 128" role="img" aria-label="视频缩略图：两位访谈者在柔光下对坐交谈">
+                <rect width="184" height="128" fill="#f2e6ef"/>
+                <rect x="0" y="92" width="184" height="36" fill="#d8c3d4"/>
+                <circle cx="62" cy="56" r="17" fill="#8b6a86"/>
+                <path d="M42 78q20-14 40 0l8 24H34Z" fill="#a37f9d"/>
+                <circle cx="128" cy="52" r="15" fill="#6f5570"/>
+                <path d="M110 72q18-12 36 0l7 30h-50Z" fill="#8a6a88"/>
+                <rect x="86" y="86" width="14" height="26" rx="3" fill="#7c5a78"/>
+              </svg>
+            </div>
+            <div class="gv-mini__info">
+              <h3 class="gv-mini__title">从业十二年，我为什么还在坚持拍长镜头访谈</h3>
+              <div class="gv-mini__sub"><em>人物访谈</em><span>@镜前幕后</span><span>7.3万播放</span></div>
+            </div>
+          </li>
+          <li class="gv-mini">
+            <div class="gv-mini__thumb">
+              <svg viewBox="0 0 184 128" role="img" aria-label="视频缩略图：夜空中城市灯光与长曝光车流">
+                <rect width="184" height="128" fill="#141a26"/>
+                <g fill="#1e2736"><rect x="8" y="52" width="26" height="76"/><rect x="42" y="38" width="20" height="90"/><rect x="122" y="46" width="24" height="82"/><rect x="152" y="58" width="24" height="70"/></g>
+                <g fill="#ffc46b" opacity=".9"><rect x="14" y="60" width="5" height="6"/><rect x="24" y="76" width="5" height="6"/><rect x="46" y="50" width="5" height="6"/><rect x="128" y="58" width="5" height="6"/><rect x="160" y="70" width="5" height="6"/></g>
+                <path d="M0 116q46-30 92-8t92-6v26H0Z" fill="#2a2233"/>
+                <path d="M0 112q46-16 92 4t92-2" stroke="#ff6b3d" stroke-width="3" fill="none" opacity=".8"/>
+              </svg>
+            </div>
+            <div class="gv-mini__info">
+              <h3 class="gv-mini__title">夜里十一点，我在天桥上站了两个小时拍车流</h3>
+              <div class="gv-mini__sub"><em>城市探索</em><span>@夜色取景器</span><span>6.1万播放</span></div>
+            </div>
+          </li>
+          <li class="gv-mini">
+            <div class="gv-mini__thumb">
+              <svg viewBox="0 0 184 128" role="img" aria-label="视频缩略图：手工陶艺拉坯的旋转粘土与双手">
+                <rect width="184" height="128" fill="#e7dccb"/>
+                <rect x="0" y="96" width="184" height="32" fill="#c9b79c"/>
+                <ellipse cx="92" cy="96" rx="46" ry="10" fill="#b39d7d"/>
+                <path d="M72 96q4-34 20-34t20 34Z" fill="#a9794f"/>
+                <path d="M70 74q22-12 44 0" stroke="#8a5f3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <circle cx="60" cy="60" r="12" fill="#d9b48c"/>
+                <circle cx="126" cy="58" r="11" fill="#d9b48c"/>
+              </svg>
+            </div>
+            <div class="gv-mini__info">
+              <h3 class="gv-mini__title">一块泥巴到一只杯子：手作陶艺的六道工序</h3>
+              <div class="gv-mini__sub"><em>手作 DIY</em><span>@陶土与火</span><span>5.4万播放</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="gv-video-grid">
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：厨房里正在翻炒的家常菜与升腾热气">
+              <rect width="320" height="180" fill="#ffe9d6"/>
+              <rect x="0" y="128" width="320" height="52" fill="#e6b98f"/>
+              <ellipse cx="160" cy="120" rx="86" ry="20" fill="#c98a56"/>
+              <ellipse cx="160" cy="116" rx="72" ry="15" fill="#f3a35c"/>
+              <g fill="#e05a2b"><circle cx="138" cy="112" r="10"/><circle cx="168" cy="108" r="12"/><circle cx="192" cy="116" r="9"/></g>
+              <g fill="#4d8a3f"><circle cx="152" cy="118" r="6"/><circle cx="180" cy="120" r="5"/></g>
+              <g stroke="#fff" stroke-width="3" opacity=".7" fill="none" stroke-linecap="round">
+                <path d="M126 82q-8-14 0-24"/><path d="M160 74q-8-16 0-26"/><path d="M194 82q-8-14 0-24"/>
+              </g>
+            </svg>
+            <span class="gv-card__tag">美食烹饪</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">三道家常菜，一台机器拍完的晚餐记录</h3>
+            <p class="gv-card__desc">不用补光、不加滤镜，只用一盏厨房顶灯完成整条片子的拍摄，顺带聊聊家常菜视频的剪辑节奏。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#e0895a">灶</span>@厨房里的老周
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 24.7万</span><span>赞 9.3千</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">9321</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：剪辑软件界面上的多轨音频波形">
+              <rect width="320" height="180" fill="#1d2230"/>
+              <g fill="#2a3346"><rect x="12" y="14" width="296" height="26" rx="4"/><rect x="12" y="46" width="130" height="120" rx="4"/><rect x="150" y="46" width="158" height="120" rx="4"/></g>
+              <g stroke="#5ad1a8" stroke-width="2" fill="none">
+                <path d="M22 108c8-16 14 16 22 0s14 16 22 0 14 16 22 0 14 16 22 0 14 16 22 0"/>
+              </g>
+              <g stroke="#ff8a3d" stroke-width="2" fill="none">
+                <path d="M160 90c7-12 12 12 19 0s12 12 19 0 12 12 19 0 12 12 19 0 12 12 19 0 12 12 19 0"/>
+              </g>
+              <g fill="#4a5878"><rect x="160" y="132" width="60" height="8" rx="2"/><rect x="226" y="132" width="40" height="8" rx="2"/><rect x="272" y="132" width="26" height="8" rx="2"/></g>
+            </svg>
+            <span class="gv-card__tag">教程干货</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">音频降噪实战：三招救回嘈杂现场的素材</h3>
+            <p class="gv-card__desc">从取样噪声到多段压缩，手把手演示如何在常见剪辑软件里处理风声、人声与设备底噪。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#3f5f8f">声</span>@调音台老陈
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 18.2万</span><span>赞 7.1千</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">7104</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：老巷子里晾晒的衣物与斑驳墙面">
+              <rect width="320" height="180" fill="#dfe7dd"/>
+              <rect x="0" y="0" width="320" height="86" fill="#8fa79a"/>
+              <rect x="0" y="86" width="320" height="94" fill="#b9c7b6"/>
+              <g fill="#7c8f80"><rect x="18" y="52" width="46" height="128"/><rect x="150" y="42" width="34" height="138"/></g>
+              <g fill="#e8f0e6"><rect x="78" y="60" width="34" height="46" rx="3"/><rect x="120" y="66" width="26" height="40" rx="3"/></g>
+              <path d="M60 52h150" stroke="#6d7f71" stroke-width="3"/>
+              <g fill="#d6a85a"><rect x="200" y="96" width="28" height="36" rx="3"/></g>
+              <g fill="#8fa79a" opacity=".5"><rect x="0" y="150" width="320" height="30"/></g>
+            </svg>
+            <span class="gv-card__tag">在地文化</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">一条巷子的三十年：从裁缝铺到独立咖啡馆</h3>
+            <p class="gv-card__desc">走访五位仍在老巷营业的店主，用影像留存城市更新中那些慢慢消失又慢慢长出来的生活细节。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#6f8a78">巷</span>@巷子影像组
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 15.9万</span><span>赞 6.5千</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">6502</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：书桌上摊开的手写笔记与一叠胶片">
+              <rect width="320" height="180" fill="#f0e6d6"/>
+              <rect x="0" y="0" width="320" height="180" fill="#e8dcc8"/>
+              <rect x="46" y="30" width="150" height="120" rx="4" fill="#fffaf0" transform="rotate(-3 46 30)"/>
+              <g stroke="#b8a68c" stroke-width="3" stroke-linecap="round">
+                <path d="M66 58h98"/><path d="M66 78h112"/><path d="M66 98h74"/><path d="M66 118h92"/>
+              </g>
+              <g fill="#2c2a28">
+                <rect x="216" y="42" width="76" height="54" rx="4"/>
+                <rect x="230" y="52" width="12" height="10" fill="#c9c0b2"/><rect x="252" y="52" width="12" height="10" fill="#c9c0b2"/><rect x="274" y="52" width="12" height="10" fill="#c9c0b2"/>
+                <rect x="230" y="72" width="12" height="10" fill="#c9c0b2"/><rect x="252" y="72" width="12" height="10" fill="#c9c0b2"/><rect x="274" y="72" width="12" height="10" fill="#c9c0b2"/>
+              </g>
+            </svg>
+            <span class="gv-card__tag">创作幕后</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">我的分镜本：一条三分钟短片写了四十七页</h3>
+            <p class="gv-card__desc">展示从灵感到终剪的完整分镜稿，聊清楚“先写画面还是先写情绪”这个老问题。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#a08662">本</span>@分镜本小林
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 11.3万</span><span>赞 5.2千</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">5218</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：宠物狗在客厅地板上的抓拍瞬间">
+              <rect width="320" height="180" fill="#f6efe4"/>
+              <rect x="0" y="128" width="320" height="52" fill="#c9a87c"/>
+              <g stroke="#c9a87c" stroke-width="2" opacity=".6"><path d="M0 148h320"/><path d="M0 166h320"/></g>
+              <ellipse cx="158" cy="132" rx="66" ry="16" fill="#a8875c" opacity=".4"/>
+              <ellipse cx="158" cy="106" rx="42" ry="28" fill="#c58b4a"/>
+              <circle cx="196" cy="88" r="22" fill="#d29a58"/>
+              <circle cx="204" cy="84" r="4" fill="#2c2119"/>
+              <ellipse cx="214" cy="96" rx="7" ry="5" fill="#2c2119"/>
+              <path d="M120 96q-10-24 6-30t10 24" fill="#b97e40"/>
+            </svg>
+            <span class="gv-card__tag">萌宠日常</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">它每天六点准时叫醒我，我用镜头记了三百天</h3>
+            <p class="gv-card__desc">用固定机位记录一只狗的清晨仪式，从取材到节奏，聊聊日常记录型短片的可看性来源。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#c9924e">汪</span>@有只柯基叫年糕
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 32.5万</span><span>赞 1.4万</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">14234</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="gv-card">
+          <div class="gv-card__cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="视频封面：录音棚里乐队成员演奏的现场画面">
+              <rect width="320" height="180" fill="#241a2e"/>
+              <circle cx="240" cy="52" r="44" fill="#ff8a3d" opacity=".35"/>
+              <rect x="0" y="130" width="320" height="50" fill="#180f20"/>
+              <g fill="#120a1a">
+                <circle cx="92" cy="70" r="18"/><path d="M70 94q22-14 44 0l8 40H62Z"/>
+                <circle cx="140" cy="76" r="15"/><path d="M122 98q18-12 36 0l7 36h-50Z"/>
+                <circle cx="196" cy="68" r="16"/><path d="M178 92q18-12 36 0l7 42h-50Z"/>
+              </g>
+              <g stroke="#ffc46b" stroke-width="3" fill="none" opacity=".85">
+                <path d="M62 138v-20"/><path d="M74 142v-24"/><path d="M86 136v-16"/>
+              </g>
+              <g stroke="#ff6b3d" stroke-width="3" fill="none" opacity=".8">
+                <path d="M248 132v-26"/><path d="M260 138v-34"/><path d="M272 130v-20"/>
+              </g>
+            </svg>
+            <span class="gv-card__tag">音乐现场</span>
+          </div>
+          <div class="gv-card__body">
+            <h3 class="gv-card__title">排练室的一场即兴：没有观众，但每个人都笑了</h3>
+            <p class="gv-card__desc">完整记录一支独立乐队的排练片段，现场收音、双机位切换与后期混音的取舍都在这条片子里。</p>
+            <div class="gv-card__author">
+              <span class="gv-avatar" style="background:#7a4a8f">乐</span>@排练室日记
+            </div>
+            <div class="gv-card__foot">
+              <div class="gv-card__stats"><span>播放 9.6万</span><span>赞 4.4千</span></div>
+              <div class="gv-actions">
+                <button class="gv-iconbtn gv-like" aria-label="点赞"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9h4Zm0 0 4-7 1.5 1.2c.6.5.8 1.3.6 2L12 10h6a2 2 0 0 1 2 2.3l-1 6A2 2 0 0 1 17 20H7"/></svg><span class="gv-like-num">4408</span></button>
+                <button class="gv-iconbtn gv-fav" aria-label="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.3A4 4 0 0 1 12 8a4 4 0 0 1 7 2.7C19 15.4 12 20 12 20Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 关键词解析 ===== -->
+  <section class="gv-section gv-section--soft" id="parse">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Brand Insight</span>
+        <h2 class="gv-h2">深入理解 <em>91干逼网站</em> 的内容生态</h2>
+        <p class="gv-lead">从品牌定位、内容体系到社区运营，这份解析帮助你快速了解官网的运作方式与价值主张。</p>
+      </div>
+
+      <div class="gv-parse">
+        <div class="gv-parse__body">
+          <h3>一、从名称到品牌：91干逼网站到底是什么</h3>
+          <p>对很多新观众来说，“91干逼网站”首先是一串直接的字符组合，而不是一个抽象的企业口号。它最初来源于早期用户对站内视频内容风格的口语化描述——干脆、直给、不绕弯子。品牌团队在 2017 年正式把这一称呼确立为官网名称，并在此基础上建立了统一的内容标准与视觉体系。多年下来，这个名字已经从一个圈内昵称，演变成一个有完整产品结构、有明确创作者梯队、有稳定更新节奏的视频品牌。</p>
+          <p>作为一家深耕视频垂直领域的<strong>企业</strong>，91干逼网站并不追求全品类扩张。官网的核心策略是把有限资源集中投入到三个环节：原创视频的孵化、创作者能力的培养、以及社区氛围的长期维护。这样的聚焦让官网在细分市场中形成了较强的口碑积累，也让“值得信赖”这四个字有了具体支撑——观众打开官网，能预期看到高清、完整、标签清晰的视频，而不是零散拼凑的搬运内容。</p>
+          <p>从内容结构看，官网目前分为精品内容库、专题企划、创作者名录、榜单、企业动态与帮助中心六个主要板块。每个板块都有独立的编辑规则和运营标准，例如精品内容库要求入选视频必须为作者原创、画质达到高清标准、信息描述完整；专题企划则围绕特定主题做深度聚合，通常包含三到五条相互呼应的内容。这种分层设计让不同需求的观众都能快速找到入口，也为创作者提供了清晰的成长路径。</p>
+
+          <h3>二、内容体系：如何保证每条视频都有信息量</h3>
+          <p>视频平台最容易出现的问题是内容同质化。为了避免这一点，91干逼网站在官网内推行了“三审一评”的内容准入机制：第一轮由系统检测画面清晰度、音频电平与基础元信息；第二轮由编辑人工观看并评估信息密度；第三轮由领域评审判断内容是否具备独特视角；最后在发布后一周内收集用户反馈，形成内容质量评分。这个过程看起来繁琐，但实际执行后，低质量内容的重复投稿量明显下降，创作者也更愿意在前期就打磨脚本。</p>
+          <p>以教程类内容为例，官网上线的每条教程都要求给出可复现的步骤、明确的前置条件和真实的成片效果。观众在看“三招降噪”这条视频时，不仅能看到操作演示，还能下载对应的工程说明，理解每一步为什么这样做。这种“可验证”的内容策略，是官网区别于普通短视频平台的关键。对于生活记录类内容，官网更强调真实性——不鼓励为博取点击而摆拍，编辑会在审核时特别关注素材来源与拍摄日期的连贯性。</p>
+          <p>同时，官网还建立了完整的标签体系。每条视频至少携带一个内容方向标签和一个制作难度标签，前者帮助观众按兴趣筛选，后者帮助新手创作者判断参考价值。这套标签在本次页面改版中进一步细化，新增了“幕后”“访谈”“城市”等常用维度，并同步更新了搜索提示词库，让站内检索的命中率更高。内容生态的健康发展，离不开这些看起来不起眼的基础工程。</p>
+
+          <h3>三、创作者与社区：长期陪伴比短期流量更重要</h3>
+          <p>91干逼网站把创作者视为官网最重要的资产。平台侧的统计显示，持续更新超过两年的创作者，其单条视频的平均完播率比新入驻创作者高出将近一倍。这说明观众更愿意跟随稳定输出的作者，而不是追逐一次性的爆款。基于这一判断，官网推出了创作者成长计划，提供从选题诊断、拍摄建议到剪辑复盘的全流程支持，并定期组织线下交流活动，让不同领域的创作者能够互相看到彼此的工作方式。</p>
+          <p>社区氛围方面，官网一直坚持“真实、温暖、专业”的评论文化。评论区不鼓励情绪化的短句刷屏，而是引导用户给出具体的观看感受，例如哪一段打光让你印象深刻、哪个转场处理得自然。这种引导让评论区的信息价值明显提升，也反过来给创作者提供了可用的反馈。本次改版中，评论模块新增了引用摘录样式，用户可以直接引用视频中的一句话展开讨论，让交流更有上下文。</p>
+          <p>在商业化方面，官网保持了相对克制。合作品牌的选择需要经过内容调性匹配评估，广告内容必须明确标注，且不能干扰正常观看。官网认为，只有把用户体验放在前面，品牌合作才有长期价值。这一原则也体现在页面设计上——广告位不会遮挡播放区域，推荐内容与商业内容在视觉上有清晰区分。正是这种持续的自我约束，让官网在用户中建立了较高的信任度。</p>
+
+          <h3>四、运营与未来：把一件事做久</h3>
+          <p>从运营数据看，官网的月活跃观众在过去三年保持稳定增长，创作者数量与原创视频条数也在同步提升。更值得关注的是内容结构的变化：早期以单一类型为主，如今教程、访谈、城市、生活记录四类内容已经形成相对均衡的比例。这种均衡不是自然形成的，而是通过专题企划、榜单激励与创作指南共同引导的结果。官网希望社区呈现多元面貌，而不是被单一流量逻辑主导。</p>
+          <p>未来一年，91干逼网站计划在三个方面继续投入：一是提升高清与正版内容的转码与分发能力，让上传与下载体验更顺畅；二是扩大创作者扶持规模，新增更多细分领域的专项支持；三是完善社区规则与反馈机制，让用户的声音能够更快进入产品迭代。官网团队相信，视频品牌的价值不在于一时热度，而在于能否持续运营、持续陪伴创作者成长。这也是“91干逼网站”这个名字背后最想表达的东西——直接、坦率，但认真做事。</p>
+        </div>
+
+        <aside class="gv-parse__aside">
+          <h4>官网核心信息</h4>
+          <div class="gv-parse__facts">
+            <div class="gv-parse__fact"><span>品牌成立</span><b>2017 年</b></div>
+            <div class="gv-parse__fact"><span>内容方向</span><b>4 大类</b></div>
+            <div class="gv-parse__fact"><span>创作者规模</span><b>12.8 万</b></div>
+            <div class="gv-parse__fact"><span>原创视频</span><b>46 万+</b></div>
+            <div class="gv-parse__fact"><span>月活观众</span><b>3200 万</b></div>
+            <div class="gv-parse__fact"><span>更新频率</span><b>每日</b></div>
+            <div class="gv-parse__fact"><span>内容标准</span><b>原创 · 高清</b></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专题企划 ===== -->
+  <section class="gv-section" id="topics">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Special Projects</span>
+        <h2 class="gv-h2">专题企划 · 91干逼网站<em>季度策划</em></h2>
+        <p class="gv-lead">围绕具体主题组织的深度内容合集，每个专题由编辑与创作者共同策划，持续更新中。</p>
+      </div>
+      <div class="gv-topic-grid">
+        <article class="gv-topic">
+          <div class="gv-topic__head">
+            <span class="gv-topic__num">01</span>
+            <span class="gv-topic__status gv-topic__status--live">更新中</span>
+          </div>
+          <h3 class="gv-topic__title">城市醒来之前：清晨四点到七点的影像档案</h3>
+          <p class="gv-topic__desc">记录城市在大多数人醒来之前的样貌，涵盖市场、公交、早餐铺与清扫街道的劳动者。</p>
+          <ul class="gv-topic__items">
+            <li>菜市场的第一盏灯：跟拍摊主二十一天</li>
+            <li>首班公交上的六个人，和他们的目的地</li>
+            <li>早餐铺的十分钟：一锅豆浆的完整流程</li>
+          </ul>
+        </article>
+
+        <article class="gv-topic">
+          <div class="gv-topic__head">
+            <span class="gv-topic__num">02</span>
+            <span class="gv-topic__status">已完结 · 8 集</span>
+          </div>
+          <h3 class="gv-topic__title">一台机器拍到底：低成本创作的极限测试</h3>
+          <p class="gv-topic__desc">限定设备、限定预算、限定拍摄时长，看八位创作者如何在约束条件下完成完整表达。</p>
+          <ul class="gv-topic__items">
+            <li>只用一支定焦镜头，我拍完了整条街</li>
+            <li>预算三百元，如何做出有质感的夜戏</li>
+            <li>没有助理的拍摄日：一个人的机位管理</li>
+          </ul>
+        </article>
+
+        <article class="gv-topic">
+          <div class="gv-topic__head">
+            <span class="gv-topic__num">03</span>
+            <span class="gv-topic__status gv-topic__status--live">征集中</span>
+          </div>
+          <h3 class="gv-topic__title">镜前幕后：创作者访谈计划</h3>
+          <p class="gv-topic__desc">走进创作者的工作现场，聊他们的方法、习惯与困惑，呈现影像背后的真实工作状态。</p>
+          <ul class="gv-topic__items">
+            <li>访谈：拍了十二年长镜头，我为什么还在坚持</li>
+            <li>从剪辑师到导演，中间隔着多少条片子</li>
+            <li>独立创作者的收支表：一笔一笔算给你看</li>
+          </ul>
+        </article>
+
+        <article class="gv-topic">
+          <div class="gv-topic__head">
+            <span class="gv-topic__num">04</span>
+            <span class="gv-topic__status">筹备中</span>
+          </div>
+          <h3 class="gv-topic__title">声音先行：被忽略的现场收音现场</h3>
+          <p class="gv-topic__desc">聚焦视频中的声音设计，从现场收音到后期混音，拆解那些让画面“活起来”的声音细节。</p>
+          <ul class="gv-topic__items">
+            <li>一条街的环境声，如何采样成完整声场</li>
+            <li>人声、风声与设备底噪的三重处理</li>
+            <li>混音台上的三小时：成片最后一道工序</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 创作者矩阵 ===== -->
+  <section class="gv-section gv-section--warm" id="authors">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Creators</span>
+        <h2 class="gv-h2">创作者矩阵 · 与 <em>91干逼网站</em> 一同成长</h2>
+        <p class="gv-lead">他们来自不同城市、不同职业，但都在用影像认真记录。以下为本期推荐的四位创作者。</p>
+      </div>
+      <div class="gv-authors">
+        <article class="gv-author">
+          <div class="gv-author__avatar" style="background:linear-gradient(135deg,#e36a3c,#f0a25a)"><span>🅐</span>谭</div>
+          <div class="gv-author__info">
+            <div class="gv-author__name">老谭的广角</div>
+            <div class="gv-author__field">生活影像 · 城市记录</div>
+            <p class="gv-author__bio">在本地生活了三十年的摄影爱好者，习惯凌晨出门扫街。擅长用固定机位与自然光记录普通人的日常，作品节奏偏慢，但信息密度高，尤其擅长菜市场、早餐铺等生活场景的跟拍。</p>
+            <div class="gv-author__stats"><span><b>128</b> 作品</span><span><b>21.4万</b> 粉丝</span></div>
+          </div>
+        </article>
+
+        <article class="gv-author">
+          <div class="gv-author__avatar" style="background:linear-gradient(135deg,#3f6f9f,#62a0c9)"><span>🎧</span>南</div>
+          <div class="gv-author__info">
+            <div class="gv-author__name">剪辑师南音</div>
+            <div class="gv-author__field">教程干货 · 后期剪辑</div>
+            <p class="gv-author__bio">职业剪辑师，从业九年，参与过多部纪录片与商业短片。官网教程类内容的主要贡献者，讲课风格直接，喜欢用可复现的步骤替代抽象理论，强调“先理解为什么，再学怎么做”。</p>
+            <div class="gv-author__stats"><span><b>96</b> 作品</span><span><b>18.7万</b> 粉丝</span></div>
+          </div>
+        </article>
+
+        <article class="gv-author">
+          <div class="gv-author__avatar" style="background:linear-gradient(135deg,#6f8a52,#a3bd7a)"><span>🏕</span>洛</div>
+          <div class="gv-author__info">
+            <div class="gv-author__name">山野阿洛</div>
+            <div class="gv-author__field">户外活动 · 旅行见闻</div>
+            <p class="gv-author__bio">常年在山野与城市之间往返的户外影像创作者，偏爱清晨与傍晚的光线。作品以徒步、骑行与露营为主题，画面干净，解说克制，注重拍摄过程中的真实体验而非结果展示。</p>
+            <div class="gv-author__stats"><span><b>74</b> 作品</span><span><b>15.2万</b> 粉丝</span></div>
+          </div>
+        </article>
+
+        <article class="gv-author">
+          <div class="gv-author__avatar" style="background:linear-gradient(135deg,#8a5a9f,#c08ad0)"><span>🎬</span>镜</div>
+          <div class="gv-author__info">
+            <div class="gv-author__name">镜前幕后</div>
+            <div class="gv-author__field">人物访谈 · 创作幕后</div>
+            <p class="gv-author__bio">纪录片方向的独立创作者，专注人物访谈与工作现场记录。擅长在长时间对话中捕捉自然瞬间，认为好的访谈不是提问技巧，而是让对方感到安全。作品多次入选官网季度专题。</p>
+            <div class="gv-author__stats"><span><b>58</b> 作品</span><span><b>12.9万</b> 粉丝</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 榜单 ===== -->
+  <section class="gv-section" id="rank">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Ranking</span>
+        <h2 class="gv-h2">数据榜单 · <em>91干逼网站</em> 本周观察</h2>
+        <p class="gv-lead">基于播放完成度、互动质量与内容评分综合计算，每周更新一次。</p>
+      </div>
+      <div class="gv-rank">
+        <div class="gv-rank__col">
+          <h3 class="gv-rank__title"><i></i>热度榜</h3>
+          <ul class="gv-rank__list">
+            <li class="gv-rank__item"><span class="gv-rank__no">1</span><div class="gv-rank__info"><div class="gv-rank__name">它每天六点准时叫醒我，我用镜头记了三百天</div><div class="gv-rank__sub"><span>@有只柯基叫年糕</span><b>32.5万播放</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">2</span><div class="gv-rank__info"><div class="gv-rank__name">清晨五点，我在菜市场拍到了一场安静的交接</div><div class="gv-rank__sub"><span>@老谭的广角</span><b>28.1万播放</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">3</span><div class="gv-rank__info"><div class="gv-rank__name">三道家常菜，一台机器拍完的晚餐记录</div><div class="gv-rank__sub"><span>@厨房里的老周</span><b>24.7万播放</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">4</span><div class="gv-rank__info"><div class="gv-rank__name">音频降噪实战：三招救回嘈杂现场的素材</div><div class="gv-rank__sub"><span>@调音台老陈</span><b>18.2万播放</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">5</span><div class="gv-rank__info"><div class="gv-rank__name">一条巷子的三十年：从裁缝铺到独立咖啡馆</div><div class="gv-rank__sub"><span>@巷子影像组</span><b>15.9万播放</b></div></div></li>
+          </ul>
+        </div>
+
+        <div class="gv-rank__col">
+          <h3 class="gv-rank__title"><i></i>新人榜</h3>
+          <ul class="gv-rank__list">
+            <li class="gv-rank__item"><span class="gv-rank__no">1</span><div class="gv-rank__info"><div class="gv-rank__name">陶土与火</div><div class="gv-rank__sub"><span>手作 DIY</span><b>入驻 46 天</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">2</span><div class="gv-rank__info"><div class="gv-rank__name">有只柯基叫年糕</div><div class="gv-rank__sub"><span>萌宠日常</span><b>入驻 52 天</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">3</span><div class="gv-rank__info"><div class="gv-rank__name">分镜本小林</div><div class="gv-rank__sub"><span>创作幕后</span><b>入驻 67 天</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">4</span><div class="gv-rank__info"><div class="gv-rank__name">夜色取景器</div><div class="gv-rank__sub"><span>城市探索</span><b>入驻 71 天</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">5</span><div class="gv-rank__info"><div class="gv-rank__name">排练室日记</div><div class="gv-rank__sub"><span>音乐现场</span><b>入驻 83 天</b></div></div></li>
+          </ul>
+        </div>
+
+        <div class="gv-rank__col">
+          <h3 class="gv-rank__title"><i></i>口碑榜</h3>
+          <ul class="gv-rank__list">
+            <li class="gv-rank__item"><span class="gv-rank__no">1</span><div class="gv-rank__info"><div class="gv-rank__name">镜前幕后 · 人物访谈计划</div><div class="gv-rank__sub"><span>内容评分</span><b>9.6 分</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">2</span><div class="gv-rank__info"><div class="gv-rank__name">剪辑师南音 · 后期系列</div><div class="gv-rank__sub"><span>内容评分</span><b>9.4 分</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">3</span><div class="gv-rank__info"><div class="gv-rank__name">山野阿洛 · 户外影像</div><div class="gv-rank__sub"><span>内容评分</span><b>9.2 分</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">4</span><div class="gv-rank__info"><div class="gv-rank__name">老谭的广角 · 生活记录</div><div class="gv-rank__sub"><span>内容评分</span><b>9.1 分</b></div></div></li>
+            <li class="gv-rank__item"><span class="gv-rank__no">5</span><div class="gv-rank__info"><div class="gv-rank__name">巷子影像组 · 在地文化</div><div class="gv-rank__sub"><span>内容评分</span><b>8.9 分</b></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 用户评价 ===== -->
+  <section class="gv-section gv-section--soft" id="comments">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Community Voices</span>
+        <h2 class="gv-h2">社区声音 · 他们这样评价 <em>91干逼网站</em></h2>
+        <p class="gv-lead">来自观众的公开留言节选，保留了原始语气与长度差异。</p>
+      </div>
+      <div class="gv-comments">
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#d97b4e">阿</span>
+            <div class="gv-comment__who"><b>阿泽不是阿泽</b><small>观众 · 注册 3 年</small></div>
+            <span class="gv-stars">★★★★★</span>
+          </div>
+          <p class="gv-comment__text">在这看了两年多，最满意的是画质和内容说明。很多平台的视频点开才知道是搬运的，这里每条都写了作者和拍摄信息，省了不少甄别时间。</p>
+          <div class="gv-comment__foot"><span>赞 214</span><span>收藏 36</span></div>
+        </article>
+
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#4f7f9f">林</span>
+            <div class="gv-comment__who"><b>林深见鹿</b><small>观众 · 收藏夹 87 条</small></div>
+            <span class="gv-stars">★★★★★</span>
+          </div>
+          <p class="gv-comment__text">剪辑教程那几期真的救了我。讲得不玄乎，步骤清楚，跟着做一遍就能复现，比看那种十分钟讲一堆概念的强太多。</p>
+          <div class="gv-comment__foot"><span>赞 156</span><span>回复 12</span></div>
+        </article>
+
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#8a6f4f">老</span>
+            <div class="gv-comment__who"><b>老许的日常</b><small>观众 · 每日活跃</small></div>
+            <span class="gv-stars">★★★★☆</span>
+          </div>
+          <p class="gv-comment__text">内容挺好，就是希望能再多一些户外和旅行方向的更新，最近这类偏少了一点。评论区氛围确实干净，很少看到吵架。</p>
+          <div class="gv-comment__foot"><span>赞 88</span><span>收藏 9</span></div>
+        </article>
+
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#9f5f7a">苏</span>
+            <div class="gv-comment__who"><b>苏打气泡水</b><small>创作者 · 入驻 1 年</small></div>
+            <span class="gv-stars">★★★★★</span>
+          </div>
+          <p class="gv-comment__text">作为创作者说一句，这里的审核确实严格，但也正因为严格，观众对内容的信任度高。我第一次投稿被打回三次，改完之后自己都能看出明显进步。</p>
+          <div class="gv-comment__foot"><span>赞 302</span><span>回复 41</span></div>
+        </article>
+
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#5f8f6f">周</span>
+            <div class="gv-comment__who"><b>周末不加班</b><small>观众 · 注册 5 年</small></div>
+            <span class="gv-stars">★★★★★</span>
+          </div>
+          <p class="gv-comment__text">最早是朋友推荐的，说这里没有那种一眼假的标题党。用到现在感觉确实如此，光是“原创”两个字就值得了。希望继续保持。</p>
+          <div class="gv-comment__foot"><span>赞 173</span><span>收藏 21</span></div>
+        </article>
+
+        <article class="gv-comment">
+          <div class="gv-comment__head">
+            <span class="gv-avatar" style="background:#7f6f9f">小</span>
+            <div class="gv-comment__who"><b>小满不满</b><small>观众 · 移动端为主</small></div>
+            <span class="gv-stars">★★★★☆</span>
+          </div>
+          <p class="gv-comment__text">手机上看挺流畅的，最近发现的专题企划板块很喜欢，省得自己一条条翻。就是搜索有时候要换关键词，希望以后能更聪明一点。</p>
+          <div class="gv-comment__foot"><span>赞 64</span><span>回复 5</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 企业动态 + 合作品牌 ===== -->
+  <section class="gv-section" id="dynamics">
+    <div class="gv-wrap">
+      <div class="gv-section-head">
+        <span class="gv-eyebrow">Official Updates</span>
+        <h2 class="gv-h2">企业动态 · 官方发布与更新日志</h2>
+        <p class="gv-lead">关于 91干逼网站官网的近期运营、产品与社区动态。</p>
+      </div>
+
+      <div class="gv-dynamics">
+        <div class="gv-dyn">
+          <span class="gv-dyn__date">2026-11-18</span>
+          <div>
+            <div class="gv-dyn__title">创作者扶持计划 2026 正式开放报名</div>
+            <div class="gv-dyn__desc">首期开放 500 个名额，覆盖教程、访谈、城市记录与生活影像四个方向，入选创作者将获得拍摄支持与专题推荐机会。</div>
+          </div>
+          <span class="gv-dyn__tag">报名中</span>
+        </div>
+        <div class="gv-dyn">
+          <span class="gv-dyn__date">2026-11-12</span>
+          <div>
+            <div class="gv-dyn__title">高清 4K 播放通道全量开放</div>
+            <div class="gv-dyn__desc">官网正版转码链路完成升级，上传视频将自动生成高清多码率版本，观众可按网络状况自由切换。</div>
+          </div>
+          <span class="gv-dyn__tag">产品更新</span>
+        </div>
+        <div class="gv-dyn">
+          <span class="gv-dyn__date">2026-11-05</span>
+          <div>
+            <div class="gv-dyn__title">「城市影像大赛」投稿期开启</div>
+            <div class="gv-dyn__desc">面向所有创作者征集城市题材影像作品，投稿截止 12 月 20 日，最终结果将在官网专题页公布。</div>
+          </div>
+          <span class="gv-dyn__tag">比赛</span>
+        </div>
+        <div class="gv-dyn">
+          <span class="gv-dyn__date">2026-10-27</span>
+          <div>
+            <div class="gv-dyn__title">社区规则 v3.2 上线，评论区新增引用摘录</div>
+            <div class="gv-dyn__desc">为提升讨论质量，评论模块支持引用内容片段展开讨论，同时更新了举报与反馈的处理时效说明。</div>
+          </div>
+          <span class="gv-dyn__tag">社区</span>
+        </div>
+      </div>
+
+      <div style="margin-top:52px">
+        <div class="gv-section-head" style="margin-bottom:24px">
+          <span class="gv-eyebrow">Partners</span>
+          <h3 class="gv-h2" style="font-size:23px">合作品牌与伙伴</h3>
+        </div>
+        <div class="gv-partners">
+          <div class="gv-partner"><b>光屿影像</b><small>设备支持伙伴</small></div>
+          <div class="gv-partner"><b>本地生活周刊</b><small>内容联合出品</small></div>
+          <div class="gv-partner"><b>山径户外</b><small>户外专题合作</small></div>
+          <div class="gv-partner"><b>拾野书店</b><small>线下放映场地</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 投稿 CTA ===== -->
+  <section class="gv-section" id="submit">
+    <div class="gv-wrap">
+      <div class="gv-cta">
+        <div>
+          <h3>把你的作品，放进 91干逼网站的精品内容库</h3>
+          <p>支持高清上传与正版登记，审核通过后可进入专题推荐与榜单评选。我们期待看到更多真实、有力量的原创影像。</p>
+        </div>
+        <div class="gv-cta__actions">
+          <button class="gv-btn gv-btn--primary" id="gvCtaSubmit">立即投稿</button>
+          <button class="gv-btn gv-btn--ghost" id="gvShareBtn" style="border-color:rgba(255,255,255,.3);color:#fff">分享官网</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="gv-section gv-section--warm" id="faq">
+    <div class="gv-wrap">
+      <div class="gv-section-head" style="text-align:center">
+        <span class="gv-eyebrow" style="justify-content:center">Help Center</span>
+        <h2 class="gv-h2">常见问题 · <em>91干逼网站</em> 帮助中心</h2>
+        <p class="gv-lead" style="margin:0 auto">关于投稿、播放、账号与合作，这里有最常见的解答。</p>
+      </div>
+      <div class="gv-faq">
+        <details>
+          <summary>投稿需要满足哪些条件？</summary>
+          <div class="gv-faq__answer">投稿视频需为作者原创或拥有完整授权，画质建议 1080p 及以上，音轨清晰无爆音。每条视频需填写完整的标题、简介、标签与拍摄信息，以便通过内容准入审核。</div>
+        </details>
+        <details>
+          <summary>审核一般需要多久？</summary>
+          <div class="gv-faq__answer">常规审核周期为 1 至 3 个工作日。若遇专题征集或活动高峰期，可能延长至 5 个工作日。审核结果会通过站内消息通知，未通过时附有具体修改建议。</div>
+        </details>
+        <details>
+          <summary>如何申请官方推荐位？</summary>
+          <div class="gv-faq__answer">在作品通过审核并发布后，可在创作者后台提交推荐申请，说明内容亮点与目标受众。编辑团队会结合当周专题方向与内容质量综合评估，推荐结果不另行收取费用。</div>
+        </details>
+        <details>
+          <summary>播放清晰度可以自行选择吗？</summary>
+          <div class="gv-faq__answer">可以。官网播放器支持多码率切换，默认根据当前网络状况自动选择。观众也可手动选择高清或超清模式，上传视频经转码后会自动生成对应版本。</div>
+        </details>
+        <details>
+          <summary>账号被举报后会怎样处理？</summary>
+          <div class="gv-faq__answer">举报会进入人工复核流程，核实前不会影响正常使用。若确认存在违规，将根据社区规则采取提醒、内容下架或账号限制等措施，并通知当事人说明情况。</div>
+        </details>
+        <details>
+          <summary>品牌合作如何联系？</summary>
+          <div class="gv-faq__answer">可通过页面底部的合作邮箱提交合作意向，注明品牌名称、合作形式与预期目标。商务团队会在 3 个工作日内回复，所有合作内容均需明确标注并符合社区内容规范。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="gv-footer">
+  <div class="gv-wrap">
+    <div class="gv-footer__grid">
+      <div>
+        <div class="gv-footer__brand">
+          <span class="gv-header__logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 6.5v11l9-5.5-9-5.5Z" fill="#fff"/></svg>
+          </span>
+          <b>91干逼网站</b>
+        </div>
+        <p class="gv-footer__desc">91干逼网站官方网站，专注原创视频内容生态，持续为创作者与观众提供高品质、正版、高清的影像服务，值得信赖的视频品牌平台。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#focus">精品内容库</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#rank">数据榜单</a></li>
+          <li><a href="#authors">创作者名录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#parse">品牌解析</a></li>
+          <li><a href="#dynamics">企业动态</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+          <li><a href="#submit">投稿入口</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li>合作邮箱：brand@video-brand.example</li>
+          <li>投稿咨询：creator@video-brand.example</li>
+          <li>工作时间：周一至周五 10:00 - 19:00</li>
+          <li>反馈建议：通过帮助中心提交</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gv-footer__bottom">
+      <span>© 2017 - 2026 91干逼网站 版权所有 · 官方网站 · 持续运营中</span>
+      <span>备案号：示例备案 00000000 号 · 内容均为原创或已获授权</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 投稿弹窗 ===== -->
+<div class="gv-modal" id="gvSubmitModal" role="dialog" aria-modal="true" aria-labelledby="gvSubmitTitle">
+  <div class="gv-modal__box">
+    <button class="gv-modal__close" data-gv-close aria-label="关闭">×</button>
+    <h3 id="gvSubmitTitle">投稿到 91干逼网站</h3>
+    <p>填写基本信息，编辑团队会在 1 至 3 个工作日内联系你。请提前准备好视频文件与作品简介。</p>
+    <form id="gvSubmitForm">
+      <div class="gv-field">
+        <label for="gvFormName">创作者昵称</label>
+        <input id="gvFormName" type="text" placeholder="请输入你的昵称" required>
+      </div>
+      <div class="gv-field">
+        <label for="gvFormTitle">作品标题</label>
+        <input id="gvFormTitle" type="text" placeholder="给作品起一个具体、清楚的标题" required>
+      </div>
+      <div class="gv-field">
+        <label for="gvFormDesc">作品简介</label>
+        <textarea id="gvFormDesc" placeholder="简单介绍作品内容、拍摄方式与亮点"></textarea>
+      </div>
+      <button class="gv-btn gv-btn--primary" type="submit" style="width:100%">提交投稿信息</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== 分享弹窗 ===== -->
+<div class="gv-modal" id="gvShareModal" role="dialog" aria-modal="true" aria-labelledby="gvShareTitle">
+  <div class="gv-modal__box">
+    <button class="gv-modal__close" data-gv-close aria-label="关闭">×</button>
+    <h3 id="gvShareTitle">分享 91干逼网站</h3>
+    <p>把官网分享给同样热爱影像的朋友，或复制页面链接方便后续查看。</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="gv-btn gv-btn--primary" id="gvCopyLink" style="flex:1 1 auto">复制页面链接</button>
+      <button class="gv-btn gv-btn--ghost" id="gvShareMore" style="flex:1 1 auto">更多分享方式</button>
+    </div>
+  </div>
+</div>
+
+<div class="gv-toast" id="gvToast"><i>✓</i><span id="gvToastText">操作成功</span></div>
+
+<button class="gv-top" id="gvTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  var toastEl = document.getElementById('gvToast');
+  var toastText = document.getElementById('gvToastText');
+  var toastTimer = null;
+  function showToast(msg){
+    toastText.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---- 移动端导航折叠 ---- */
+  var burger = document.getElementById('gvBurger');
+  var nav = document.getElementById('gvNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.classList.contains('gv-nav__link')){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---- 搜索提示 ---- */
+  var searchInput = document.getElementById('gvSearchInput');
+  var searchHint = document.getElementById('gvSearchHint');
+  var searchData = ['菜市场清晨记录','剪辑调色教程','户外徒步影像','人物访谈计划','城市夜景车流','手作陶艺工序','独立乐队排练','宠物日常记录','老巷子三十年','分镜本幕后'];
+  function renderHint(kw){
+    var list = searchData.filter(function(item){
+      return !kw || item.indexOf(kw) !== -1;
+    });
+    if(list.length === 0){
+      searchHint.innerHTML = '<li class="gv-search__empty">未找到匹配内容，换个关键词试试</li>';
+    }else{
+      searchHint.innerHTML = list.slice(0,6).map(function(item){
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+    searchHint.classList.add('is-open');
+  }
+  searchInput.addEventListener('input', function(){
+    renderHint(this.value.trim());
+  });
+  searchInput.addEventListener('focus', function(){
+    renderHint(this.value.trim());
+  });
+  document.getElementById('gvSearchBtn').addEventListener('click', function(){
+    var v = searchInput.value.trim();
+    if(!v){ showToast('请输入搜索关键词'); searchInput.focus(); return; }
+    showToast('正在为你检索「' + v + '」相关内容');
+    searchHint.classList.remove('is-open');
+  });
+  searchHint.addEventListener('click', function(e){
+    var li = e.target.closest('li');
+    if(!li) return;
+    searchInput.value = li.textContent;
+    searchHint.classList.remove('is-open');
+    showToast('已载入关键词：' + li.textContent);
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.gv-search')){
+      searchHint.classList.remove('is-open');
+    }
+  });
+
+  /* ---- 点赞 / 收藏 ---- */
+  document.querySelectorAll('.gv-like').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var numEl = btn.querySelector('.gv-like-num');
+      var active = btn.classList.toggle('is-active');
+      var cur = parseInt(numEl.textContent, 10);
+      numEl.textContent = active ? cur + 1 : cur - 1;
+      btn.style.color = active ? 'var(--gv-brand)' : '';
+      showToast(active ? '已点赞' : '已取消点赞');
+    });
+  });
+  document.querySelectorAll('.gv-fav').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var active = btn.classList.toggle('is-active');
+      var svg = btn.querySelector('svg');
+      if(active){
+        svg.setAttribute('fill','currentColor');
+        svg.style.color = 'var(--gv-brand)';
+        showToast('已加入收藏');
+      }else{
+        svg.setAttribute('fill','none');
+        svg.style.color = '';
+        showToast('已取消收藏');
+      }
+    });
+  });
+
+  /* ---- 弹窗通用 ---- */
+  function openModal(id){
+    document.getElementById(id).classList.add('is-open');
+  }
+  function closeModals(){
+    document.querySelectorAll('.gv-modal').forEach(function(m){
+      m.classList.remove('is-open');
+    });
+  }
+  document.querySelectorAll('[data-gv-close]').forEach(function(btn){
+    btn.addEventListener('click', closeModals);
+  });
+  document.querySelectorAll('.gv-modal').forEach(function(m){
+    m.addEventListener('click', function(e){
+      if(e.target === m) closeModals();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModals();
+  });
+
+  /* ---- 投稿入口 ---- */
+  document.getElementById('gvSubmitOpen').addEventListener('click', function(){
+    openModal('gvSubmitModal');
+  });
+  document.getElementById('gvCtaSubmit').addEventListener('click', function(){
+    openModal('gvSubmitModal');
+  });
+  document.getElementById('gvSubmitForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    closeModals();
+    showToast('投稿信息已提交，编辑团队将尽快联系你');
+    this.reset();
+  });
+
+  /* ---- 分享 / 复制链接 ---- */
+  document.getElementById('gvShareBtn').addEventListener('click', function(){
+    openModal('gvShareModal');
+  });
+  document.getElementById('gvCopyLink').addEventListener('click', function(){
+    var link = '#top';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        showToast('页面链接已复制');
+      }).catch(function(){
+        showToast('复制失败，请手动复制地址栏');
+      });
+    }else{
+      showToast('页面链接已复制');
+    }
+    closeModals();
+  });
+  document.getElementById('gvShareMore').addEventListener('click', function(){
+    showToast('已生成分享卡片，可选择微信或微博发送');
+    closeModals();
+  });
+
+  /* ---- 回到顶部 ---- */
+  var topBtn = document.getElementById('gvTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){
+      topBtn.classList.add('is-show');
+    }else{
+      topBtn.classList.remove('is-show');
+    }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
